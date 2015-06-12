@@ -11,6 +11,24 @@ requirements** of running another program on the (large) input file. Small
 subsets of the input file of increasing sizes can be used for benchmarking with
 the program of interest.
 
+Example usage
+-------------
+
+If ``blastp.output`` is a large file with 1e9 lines, subsets can be created
+with::
+
+  pypick blastp.output -p 0.0001 0.0004 0.0016 0.0064 -o out.
+
+In this case, four files with randomly selected lines will be created, holding
+approximatively 0.01, 0.04, 0.16 and 0.64% of the original file.
+
+Note that the four files represent **nested subsets** of the original file::
+
+  out.0.0001 < out.0.0004 < out.0.0016 < out.0.0064
+
+where ``A < B`` means that all the lines in A are also in B.
+
+
 Details
 -------
 
