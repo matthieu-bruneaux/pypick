@@ -7,14 +7,15 @@ line, so the input file can be **arbitrarily large** and still be processed (as
 long as each line can fit into memory).
 
 It can be particularly useful when trying to **estimate the run time and memory
-requirements** of running another program on the input file, by benchmarking
-the other program on small subsets of the input file of incresing sizes.
+requirements** of running another program on the (large) input file. Small
+subsets of the input file of increasing sizes can be used for benchmarking with
+the program of interest.
 
 Details
 -------
 
 The order of lines in the output is the same as in the input (so the program
-does not shuffle them, whereas the GNU program `shuf` does for example).
+does not shuffle them, whereas the GNU program ``shuf`` does for example).
 
 The number of lines to be written to the output is defined by a probability
 value. Using a probability of 0.1 will result in an output file with
@@ -67,12 +68,18 @@ To run the executables from the command line, you might need to add
   PATH=$PATH:~/.local/bin
   export PATH
   
-Similar projects
-================
+Related links and projects
+==========================
 
-A similar and more advanced project is
-`pypicker<https://github.com/JasonBristol/pypicker>`_ from Jason Bristol. There
-are probably more out there, I found the previous one by searching for `pypick`
-on GitHub.
+This `post on stackoverflow
+<http://stackoverflow.com/questions/692312/randomly-pick-lines-from-a-file-without-slurping-it-with-unix>`_
+has one-liners to do the same with ``awk`` or ``perl``. However, ``pypick``
+might be more useful when several output files of different sizes have to be
+generated since it can do so in only one pass over the input file.
+
+A similar and more advanced project for picking up random elements from a list
+is `pypicker <https://github.com/JasonBristol/pypicker>`_ from Jason
+Bristol. There are probably more out there, the previous one was found by
+searching for `pypick` on GitHub.
 
 
