@@ -48,8 +48,8 @@ call with higher probablity values.
 Installation
 ============
 
-Local install (no sudo needed)
-------------------------------
+Local install (recommended, no sudo rights needed)
+--------------------------------------------------
 
 Simply type::
 
@@ -61,8 +61,8 @@ Test if it worked with::
 
 (see below if this does not work).
 
-Global install (with sudo, not recommended)
--------------------------------------------
+Global install (not recommended, requires sudo rights)
+------------------------------------------------------
 
 Type::
 
