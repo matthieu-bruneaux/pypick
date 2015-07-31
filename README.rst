@@ -19,6 +19,7 @@ Quick install
 ::
    
   pip install --user --upgrade git+https://github.com/matthieu-bruneaux/pypick
+  # Check that it worked
   pypick -h
 
 (see *Local install troubleshooting* below if ``pypick`` is not found after
