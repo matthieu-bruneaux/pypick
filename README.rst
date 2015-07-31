@@ -17,6 +17,7 @@ requirements can then be extrapolated to the original input size.
 Quick install
 -------------
 ::
+   
   pip install --user --upgrade git+https://github.com/matthieu-bruneaux/pypick
   pypick -h
 
