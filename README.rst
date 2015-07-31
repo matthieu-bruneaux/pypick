@@ -1,16 +1,28 @@
+Extract random lines from an arbitrarily large input file
+
 Description
 ===========
 
 Pypick is a simple utility to extract a random subset of lines for a large
 input file. It reads the input file line by line and write the output line by
-line, so the input file can be **arbitrarily large** and still be processed (as
+line, so the input file can be arbitrarily large and still be processed (as
 long as each line can fit into memory).
 
-It can be particularly useful when trying to **estimate the run time and memory
-requirements** of running another program on the (large) input file. Small
-subsets of the input file of increasing sizes can be used for benchmarking with
-the program of interest.
+It can be particularly useful when trying to estimate the run time and memory
+requirements of running another program on the original, large input
+file. Small subsets of the original input file of increasing sizes can be used
+for benchmarking with the program of interest, and run time and memory
+requirements can then be extrapolated to the original input size.
 
+Quick install
+-------------
+::
+  pip install --user --upgrade git+https://github.com/matthieu-bruneaux/pypick
+  pypick -h
+
+(see *Local install troubleshooting* below if ``pypick`` is not found after
+installation).
+  
 Example usage
 -------------
 
@@ -48,8 +60,8 @@ call with higher probablity values.
 Installation
 ============
 
-Local install (recommended, no sudo rights needed)
---------------------------------------------------
+User install (recommended)
+--------------------------
 
 Simply type::
 
@@ -59,21 +71,10 @@ Test if it worked with::
 
   pypick -h
 
-(see below if this does not work).
-
-Global install (not recommended, requires sudo rights)
-------------------------------------------------------
-
-Type::
-
-  sudo pip install --upgrade git+https://github.com/matthieu-bruneaux/pygenbank
-
-Test if it worked with::
-
-  pypick -h
-
-Issues with local install
--------------------------
+You're ready to go!
+  
+Local install troubleshooting
+-----------------------------
 
 The local install with ``pip install --user ...`` will install the executables
 in ``~/.local/bin/`` and the Python module in
@@ -85,7 +86,18 @@ To run the executables from the command line, you might need to add
   # Lines to add in your ~/.bashrc file, if needed
   PATH=$PATH:~/.local/bin
   export PATH
-  
+
+System install (with **sudo**)
+------------------------------
+
+Type::
+
+  sudo pip install --upgrade git+https://github.com/matthieu-bruneaux/pygenbank
+
+Test if it worked with::
+
+  pypick -h
+
 Related links and projects
 ==========================
 

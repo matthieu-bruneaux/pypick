@@ -1,7 +1,7 @@
 ### * Description
 
 SCRIPT_DESCRIPTION = (""
- "Extract random lines from a file, based on probabilities. "
+ "Extract random lines from a file, based on given probabilities. "
  "Lines in the output are in the same order as in the input file.")
 
 ### * Setup
@@ -86,4 +86,3 @@ def _makeParser() :
 
 if (__name__ == "__main__") :
     _main()
-
